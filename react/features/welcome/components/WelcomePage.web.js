@@ -1,5 +1,6 @@
 /* global interfaceConfig */
 
+import Toggle from '@atlaskit/toggle';
 import React from 'react';
 
 import { isMobileBrowser } from '../../base/environment/utils';
@@ -230,7 +231,7 @@ class WelcomePage extends AbstractWelcomePage {
                                     </div>
                                 </form>
                             </div>
-                            <button
+                            {/* <button
                                 aria-disabled = 'false'
                                 aria-label = 'Start meeting'
                                 className = 'welcome-page-button'
@@ -239,7 +240,8 @@ class WelcomePage extends AbstractWelcomePage {
                                 tabIndex = '0'
                                 type = 'button'>
                                 { t('welcomepage.startMeeting') }
-                            </button>
+                            </button> */}
+                            <Toggle onChange = { this._onFormSubmit } />
                         </div>
 
                         { _moderatedRoomServiceUrl && (
